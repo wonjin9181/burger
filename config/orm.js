@@ -1,6 +1,6 @@
 var connection = require("./connection.js");
 
-var orm = {
+var ORM = {
     selectAll: function(tableInput, cb){
         var queryString = "SELECT * FROM " + tableInput + ";";
         connection.query(queryString, function(err, data){
@@ -32,4 +32,4 @@ var orm = {
     }
 }
 
-module.exports = orm;
+module.exports = ORM;
